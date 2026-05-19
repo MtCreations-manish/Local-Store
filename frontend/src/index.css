@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Yatra+One&family=Noto+Serif+Devanagari:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.dark body,
+.dark {
+  color-scheme: dark;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.input {
+  @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-blue-100 dark:border-slate-700 dark:bg-slate-900;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition;
+}
+
+.btn-primary {
+  @apply bg-brand text-white shadow-soft hover:bg-blue-700;
+}
+
+.btn-ghost {
+  @apply bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700;
+}
+
+.luxury-theme {
+  --luxury-ink: #24160f;
+  --luxury-coffee: #4a2b1c;
+  --luxury-cocoa: #7b4b32;
+  --luxury-gold: #b9854a;
+  --luxury-cream: #f7efe4;
+  --luxury-paper: #fffaf2;
+  background: var(--luxury-cream);
+  color: var(--luxury-ink);
+  font-family: "Lora", Georgia, serif;
+}
+
+.luxury-theme h1,
+.luxury-theme h2,
+.luxury-theme h3,
+.luxury-theme .luxury-display {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.luxury-theme .btn-primary {
+  background: var(--luxury-coffee);
+  color: #fffaf2;
+  box-shadow: 0 14px 28px rgba(74, 43, 28, 0.22);
+}
+
+.luxury-theme .btn-primary:hover {
+  background: #321e15;
+}
+
+.luxury-theme .btn-ghost {
+  background: rgba(255, 250, 242, 0.9);
+  color: var(--luxury-coffee);
+  border-color: rgba(185, 133, 74, 0.28);
+}
+
+.luxury-theme .input {
+  background: #fffaf2;
+  border-color: rgba(123, 75, 50, 0.18);
+  color: var(--luxury-ink);
+}
+
+.luxury-theme article {
+  border-radius: 10px;
+  background: #fffaf2;
+  box-shadow: 0 18px 45px rgba(74, 43, 28, 0.12);
+  border: 1px solid rgba(185, 133, 74, 0.16);
+}
+
+.aipan-theme {
+  --aipan-red: #b70d19;
+  --aipan-deep: #6f0710;
+  --aipan-maroon: #8e0a14;
+  --aipan-ivory: #fff8e9;
+  --aipan-rice: #fffdf5;
+  --aipan-gold: #d9a441;
+  --aipan-pine: #184137;
+  background: var(--aipan-ivory);
+  color: #2d1712;
+  font-family: "Noto Serif Devanagari", Georgia, serif;
+}
+
+.aipan-theme h1,
+.aipan-theme h2,
+.aipan-theme h3,
+.aipan-theme .aipan-display {
+  font-family: "Yatra One", "Noto Serif Devanagari", Georgia, serif;
+  letter-spacing: 0;
+}
+
+.aipan-theme .btn-primary {
+  background: var(--aipan-red);
+  color: var(--aipan-rice);
+  box-shadow: 0 16px 34px rgba(111, 7, 16, 0.24);
+}
+
+.aipan-theme .btn-primary:hover {
+  background: var(--aipan-deep);
+}
+
+.aipan-theme .btn-ghost,
+.aipan-theme .input {
+  background: rgba(255, 248, 233, 0.96);
+  color: #4b1f17;
+  border-color: rgba(183, 13, 25, 0.22);
+}
+
+.aipan-theme article {
+  border-radius: 10px;
+  background: #fff8e9;
+  border: 1px solid rgba(183, 13, 25, 0.18);
+  box-shadow: 0 18px 42px rgba(111, 7, 16, 0.12);
+}
+
+.aipan-theme .aipan-feature-card {
+  background: rgba(111, 7, 16, 0.74);
+  border-color: rgba(255, 253, 245, 0.32);
+  color: #fffdf5;
+}
+
+.aipan-theme .aipan-feature-card h3,
+.aipan-theme .aipan-feature-card p {
+  color: #fffdf5;
+}
+
+.aipan-border {
+  background:
+    linear-gradient(135deg, transparent 19px, rgba(255, 253, 245, 0.95) 20px, transparent 21px) 0 0 / 40px 40px,
+    linear-gradient(225deg, transparent 19px, rgba(255, 253, 245, 0.95) 20px, transparent 21px) 0 0 / 40px 40px,
+    var(--aipan-red);
+}
+
+.aipan-dots {
+  background-image:
+    radial-gradient(circle at 20px 20px, rgba(255, 253, 245, 0.82) 2px, transparent 3px),
+    radial-gradient(circle at 40px 40px, rgba(217, 164, 65, 0.3) 2px, transparent 3px);
+  background-size: 56px 56px;
+}
+
+.aipan-mandala {
+  position: relative;
+}
+
+.aipan-mandala::before,
+.aipan-mandala::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 2px solid rgba(255, 253, 245, 0.82);
+  transform: rotate(45deg);
+}
+
+.aipan-mandala::after {
+  inset: 34px;
+  border-color: rgba(217, 164, 65, 0.7);
+  transform: rotate(0deg);
+}
